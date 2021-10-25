@@ -1,18 +1,16 @@
 {
   "env": {
     "browser": true,
-    "es6": true,
-    "node": true
+    "node": true,
+    "es6": true
   },
   "parser": "babel-eslint",
   "extends": [
-    "airbnb",
     "eslint:recommended",
-    "next/core-web-vitals",
     "plugin:prettier/recommended",
-    "plugin:react/",
+    "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:react/recommended"
+    "next/core-web-vitals"
   ],
   "settings": {
     "react": {
@@ -26,13 +24,5 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react", "react-hooks", "prettier"],
-  "rules": {
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".jsx", ".tsx"]
-      }
-    ]
-  }
+  "plugins": ["react", "react-hooks", "prettier"]
 }
