@@ -8,6 +8,16 @@
       {
         "ssr": true
       }
+    ],
+    [
+      "babel-plugin-module-resolver",
+      {
+        "alias": {
+          "assets": "./assets",
+          "components": "./components",
+          "styles": "./styles"
+        }
+      }
     ]
   ]
 }
