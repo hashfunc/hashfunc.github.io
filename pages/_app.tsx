@@ -1,11 +1,14 @@
 import type { AppProps } from "next/app";
-
-import GlobalStyle from "../styles/global";
+import Head from "next/head";
+import GlobalStyle from "styles/global";
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
+      <Head>
+        <title>hashfunc.github.io</title>
+      </Head>
       <Component {...pageProps} />
     </>
   );

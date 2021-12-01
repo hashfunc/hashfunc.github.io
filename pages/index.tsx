@@ -1,17 +1,6 @@
-import type { NextPage } from "next";
-import Head from "next/head";
+import { HomeTemplate } from "templates";
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>hashfunc</title>
-      </Head>
-      <main>
-        <p>hashfunc</p>
-      </main>
-    </div>
-  );
-};
-
+function Home() {
+  return <HomeTemplate />;
+}
 export default Home;
