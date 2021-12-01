@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   StyledProfileLayout,
   StyledProfile,
@@ -8,7 +7,6 @@ import {
   StyledProfileHashTag,
   StyledProfileImage,
 } from "./Profile.styles";
-import HashfuncImage from "public/assets/hashfunc.png";
 
 function Profile() {
   return (
@@ -27,7 +25,7 @@ function Profile() {
         </StyledProfileHashTag>
       </StyledProfile>
       <StyledProfileImage>
-        <Image src={HashfuncImage} />
+        <img src="/assets/hashfunc.png" alt="hashfunc profile image" />
       </StyledProfileImage>
     </StyledProfileLayout>
   );

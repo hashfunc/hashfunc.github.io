@@ -54,4 +54,9 @@ export const StyledProfileImage = styled.div`
   border: 1px solid rgba(0, 0, 0, 0.02);
   border-radius: 50%;
   box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.15);
+  img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
 `;
