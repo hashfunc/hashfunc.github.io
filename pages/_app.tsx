@@ -7,7 +7,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
     <>
       <GlobalStyle />
       <Head>
-        <title>hashfunc.github.io</title>
+        <title>hashfunc.io</title>
       </Head>
       <Component {...pageProps} />
     </>
