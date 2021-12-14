@@ -13,6 +13,13 @@ export const StyledProfileLayout = styled.div`
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 8px 32px 0 rgba(192, 192, 192, 0.35);
   backdrop-filter: blur(4px);
+  @media (max-width: 800px) {
+    flex-direction: column;
+    width: 80vw;
+    height: 85vh;
+    min-height: 550px;
+    max-height: 650px;
+  }
 `;
 
 export const StyledProfile = styled.div`
@@ -24,6 +31,11 @@ export const StyledProfile = styled.div`
   padding: 40px;
   height: 100%;
   border-right: 1px solid rgba(255, 255, 255, 0.35);
+  @media (max-width: 800px) {
+    padding: 20px;
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+  }
 `;
 
 export const StyledProfileHeader = styled.div`
@@ -58,5 +70,12 @@ export const StyledProfileImage = styled.div`
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+  }
+  @media (max-width: 800px) {
+    margin: 30px 0;
+    width: 85%;
+    max-width: 300px;
+    height: auto;
+    order: -1;
   }
 `;

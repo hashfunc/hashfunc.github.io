@@ -6,7 +6,11 @@ export default styled.main`
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  width: 100vw;
   min-height: 100vh;
-  background: url("/assets/background.jpg") no-repeat;
+  background: url("/assets/background.jpg") center no-repeat;
   background-size: cover;
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
 `;
