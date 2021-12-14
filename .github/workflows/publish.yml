@@ -1,0 +1,42 @@
+name: Publish
+on:
+  push:
+    branches:
+      - main
+jobs:
+  publish:
+    name: Publish on GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache
+
+      - name: Next build
+        run: yarn next build
+
+      - name: Next export
+        run: yarn next export
+
+      - name: Create .nojekyll file
+        run: touch out/.nojekyll
+
+      - name: Create CNAME file
+        run: echo hashfunc.io > out/CNAME
+
+      - name: Commit & Push
+        run: |
+          git config user.name GitHub Action
+          git config user.email action@github.com
+          git add -f out/
+          git checkout -b publish
+          git commit -m "$(git rev-parse HEAD)"
+          git subtree split --prefix out -b gh-pages
+          git push -f origin gh-pages:gh-pages
