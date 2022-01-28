@@ -4,9 +4,10 @@
     "node": true,
     "es6": true
   },
-  "parser": "babel-eslint",
+  "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
@@ -24,5 +25,10 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["prettier", "react", "react-hooks"]
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "react",
+    "react-hooks"
+  ]
 }
