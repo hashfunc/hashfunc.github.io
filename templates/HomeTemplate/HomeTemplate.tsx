@@ -1,9 +1,10 @@
-import { Profile } from "components";
+import { Navigation, Profile } from "components";
 import StyledMain from "styles/main";
 
 function HomeTemplate() {
   return (
     <StyledMain>
+      <Navigation />
       <Profile />
     </StyledMain>
   );
