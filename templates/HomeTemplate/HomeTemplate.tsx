@@ -1,11 +1,11 @@
 import { Profile } from "components";
-import StyledHome from "./HomeTemplate.styles";
+import StyledMain from "styles/main";
 
 function HomeTemplate() {
   return (
-    <StyledHome>
+    <StyledMain>
       <Profile />
-    </StyledHome>
+    </StyledMain>
   );
 }
 

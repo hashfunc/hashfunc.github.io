@@ -8,7 +8,7 @@ export default styled.main`
   box-sizing: border-box;
   width: 100vw;
   min-height: 100vh;
-  background: url("/assets/background.jpg") center no-repeat;
+  background: url("/assets/background.jpg") center no-repeat fixed;
   background-size: cover;
   @supports (-webkit-touch-callout: none) {
     min-height: -webkit-fill-available;

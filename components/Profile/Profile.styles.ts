@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import { GlassmorphismContainerCSS } from "styles/glassmorphism";
 
 export const StyledProfileLayout = styled.div`
+  ${GlassmorphismContainerCSS};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,11 +10,6 @@ export const StyledProfileLayout = styled.div`
   padding: 15px;
   width: 800px;
   height: 400px;
-  background: rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(192, 192, 192, 0.35);
-  backdrop-filter: blur(4px);
   @media (max-width: 800px) {
     flex-direction: column;
     width: 80vw;
