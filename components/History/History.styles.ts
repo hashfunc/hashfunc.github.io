@@ -24,6 +24,9 @@ export const StyledHistoryYear = styled.div`
   color: #8e8e8e;
   font-weight: bolder;
   font-size: 14px;
+  @media (max-width: 800px) {
+    font-size: 12px;
+  }
 `;
 
 export const StyledHistoryBody = styled.div`
@@ -54,17 +57,28 @@ export const StyledHistoryName = styled.div`
   color: #868686;
   font-size: 16px;
   font-weight: bold;
+  @media (max-width: 800px) {
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+  }
 `;
 
 export const StyledHistorySummary = styled.div`
   box-sizing: border-box;
   margin-left: 20px;
   padding-top: 10px;
+  @media (max-width: 800px) {
+    margin-left: 12px;
+  }
 `;
 
 export const StyledHistoryCategory = styled.div`
   font-size: 20px;
   line-height: 14px;
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
 `;
 
 export const StyledHistoryRole = styled.div`
@@ -77,6 +91,9 @@ export const StyledHistoryContentContainer = styled.div`
   padding-left: 16px;
   font-size: 12px;
   line-height: 24px;
+  @media (max-width: 800px) {
+    padding-left: 6px;
+  }
 `;
 
 export const StyledHistoryContent = styled.div`
@@ -87,6 +104,9 @@ export const StyledHistoryContent = styled.div`
 
 export const StyledHistoryContentMain = styled.div`
   font-size: 15px;
+  @media (max-width: 800px) {
+    font-size: 13px;
+  }
 `;
 
 export const StyledHistoryContentSub = styled.div`
@@ -94,4 +114,7 @@ export const StyledHistoryContentSub = styled.div`
   color: #5b5b5b;
   font-size: 10px;
   line-height: 16px;
+  @media (max-width: 800px) {
+    font-size: 9px;
+  }
 `;

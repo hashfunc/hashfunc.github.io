@@ -9,11 +9,11 @@ export const StyledHistoryTemplateLayout = styled(StyledMain)`
 export const StyledHistoryTemplate = styled.div`
   ${GlassmorphismContainerCSS};
   box-sizing: border-box;
-  padding: 25px;
+  padding: 15px;
   width: 800px;
   @media (max-width: 800px) {
     flex-direction: column;
-    width: 80vw;
+    width: 90vw;
     min-height: 550px;
   }
 `;

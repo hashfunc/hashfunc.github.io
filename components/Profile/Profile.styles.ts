@@ -12,7 +12,7 @@ export const StyledProfileLayout = styled.div`
   height: 400px;
   @media (max-width: 800px) {
     flex-direction: column;
-    width: 80vw;
+    width: 90vw;
     height: 85vh;
     min-height: 550px;
     max-height: 650px;
