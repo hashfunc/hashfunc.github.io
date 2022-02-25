@@ -109,7 +109,7 @@ export const StyledHistoryContentMain = styled.div`
   }
 `;
 
-export const StyledHistoryContentSub = styled.div`
+export const StyledHistoryContentEnv = styled.div`
   padding-left: 15px;
   color: #5b5b5b;
   font-size: 10px;

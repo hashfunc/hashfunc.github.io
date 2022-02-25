@@ -1,4 +1,3 @@
-import type { HistoryData } from "data/history";
 import {
   StyledHistory,
   StyledHistoryYears,
@@ -12,12 +11,12 @@ import {
   StyledHistoryContentContainer,
   StyledHistoryContent,
   StyledHistoryContentMain,
-  StyledHistoryContentSub,
+  StyledHistoryContentEnv,
 } from "./History.styles";
 
-type Props = {
-  history: HistoryData;
-};
+interface Props {
+  readonly history: HistoryData;
+}
 
 function History({ history }: Props) {
   return (
@@ -31,12 +30,12 @@ function History({ history }: Props) {
           </StyledHistorySummary>
         </StyledHistoryHeader>
         <StyledHistoryContentContainer>
-          {history.contents.map((content) => (
-            <StyledHistoryContent key={content.main}>
+          {history.contents.map(({ content, env }) => (
+            <StyledHistoryContent key={content}>
               <StyledHistoryContentMain>
-                -&nbsp;&nbsp;{content.main}
+                -&nbsp;&nbsp;{content}
               </StyledHistoryContentMain>
-              <StyledHistoryContentSub>{content.sub}</StyledHistoryContentSub>
+              <StyledHistoryContentEnv>{env}</StyledHistoryContentEnv>
             </StyledHistoryContent>
           ))}
         </StyledHistoryContentContainer>

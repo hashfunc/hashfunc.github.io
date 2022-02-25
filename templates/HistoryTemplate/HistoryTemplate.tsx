@@ -3,9 +3,12 @@ import {
   StyledHistoryTemplateLayout,
   StyledHistoryTemplate,
 } from "./HistoryTemplate.styles";
-import { histories } from "data/history";
 
-function HistoryTemplate() {
+interface Props {
+  readonly histories: readonly HistoryData[];
+}
+
+function HistoryTemplate({ histories }: Props) {
   return (
     <StyledHistoryTemplateLayout>
       <Navigation />
