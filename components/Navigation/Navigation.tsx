@@ -1,18 +1,34 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { StyledNavigation, StyledNavigationItem } from "./Navigation.styles";
+import { NavigationButton, NavigationItem } from "components";
+import { useNavigation } from "./hooks";
+import { StyledNavigation } from "./Navigation.styles";
 
 function Navigation() {
   const router = useRouter();
+  const { display, toggle } = useNavigation();
   return (
-    <StyledNavigation>
-      <StyledNavigationItem active={router.pathname === "/"}>
-        <Link href="/">about</Link>
-      </StyledNavigationItem>
-      <StyledNavigationItem active={router.pathname === "/history"}>
-        <Link href="/history">history</Link>
-      </StyledNavigationItem>
-    </StyledNavigation>
+    <>
+      <NavigationButton display={display} onClick={toggle} />
+      {display && (
+        <StyledNavigation>
+          <Link href="/" passHref>
+            <NavigationItem
+              active={router.pathname === "/"}
+              name="about"
+              toggle={toggle}
+            />
+          </Link>
+          <Link href="/history" passHref>
+            <NavigationItem
+              active={router.pathname === "/history"}
+              name="history"
+              toggle={toggle}
+            />
+          </Link>
+        </StyledNavigation>
+      )}
+    </>
   );
 }
 

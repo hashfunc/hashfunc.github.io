@@ -1,4 +1,4 @@
-import { History, Navigation } from "components";
+import { History } from "components";
 import {
   StyledHistoryTemplateLayout,
   StyledHistoryTemplate,
@@ -11,7 +11,6 @@ interface Props {
 function HistoryTemplate({ histories }: Props) {
   return (
     <StyledHistoryTemplateLayout>
-      <Navigation />
       <StyledHistoryTemplate>
         {histories.map((history) => (
           <History history={history} key={history.name} />
