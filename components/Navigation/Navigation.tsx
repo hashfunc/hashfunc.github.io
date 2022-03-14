@@ -6,11 +6,11 @@ import { StyledNavigation } from "./Navigation.styles";
 
 function Navigation() {
   const router = useRouter();
-  const { display, toggle } = useNavigation();
+  const { isDisplay, toggle } = useNavigation();
   return (
     <>
-      <NavigationButton display={display} onClick={toggle} />
-      {display && (
+      <NavigationButton isDisplay={isDisplay} onClick={toggle} />
+      {isDisplay && (
         <StyledNavigation>
           <Link href="/" passHref>
             <NavigationItem

@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { GlassmorphismContainerCSS } from "styles/glassmorphism";
 
 interface Props {
-  display?: boolean;
+  isDisplay: boolean;
 }
 
 export const StyledNavigationButton = styled.button<Props>`
@@ -25,8 +25,8 @@ export const StyledNavigationButton = styled.button<Props>`
     height: 26px;
     color: #5e5e5e;
     transition: transform ease-in-out 0.4s;
-    ${({ display }) =>
-      display &&
+    ${({ isDisplay }) =>
+      isDisplay &&
       css`
         transform: rotate(-540deg);
       `}

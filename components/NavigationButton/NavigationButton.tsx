@@ -4,13 +4,17 @@ import { StyledNavigationButton } from "./NavigationButton.styles";
 import type { MouseEventHandler } from "react";
 
 interface Props {
-  display?: boolean;
+  isDisplay: boolean;
   onClick: MouseEventHandler<HTMLButtonElement>;
 }
 
-function NavigationButton({ display, onClick }: Props) {
+function NavigationButton({ isDisplay, onClick }: Props) {
   return (
-    <StyledNavigationButton type="button" onClick={onClick} display={display}>
+    <StyledNavigationButton
+      type="button"
+      onClick={onClick}
+      isDisplay={isDisplay}
+    >
       <ChevronUpIcon />
     </StyledNavigationButton>
   );
