@@ -1,10 +1,11 @@
+import { AtSymbolIcon } from "@heroicons/react/outline";
 import {
   StyledProfileLayout,
   StyledProfile,
   StyledProfileHeader,
   StyledProfileName,
   StyledProfileRole,
-  StyledProfileHashTag,
+  StyledProfileLink,
   StyledProfileImage,
 } from "./Profile.styles";
 
@@ -16,13 +17,16 @@ function Profile() {
           <StyledProfileRole>개발자</StyledProfileRole>
           <StyledProfileName>hashfunc</StyledProfileName>
         </StyledProfileHeader>
-        <StyledProfileHashTag>
-          <div>#Python #Go #Java #Kotlin</div>
-          <div>#Django #Spring</div>
-          <div>#Javascript #Typescript</div>
-          <div>#Vue #React #NextJS</div>
-          <div>#Kubernetes</div>
-        </StyledProfileHashTag>
+        <StyledProfileLink>
+          <a href="https://github.com/hashfunc">
+            <img src="/assets/github.png" alt="GitHub icon" />
+            hashfunc
+          </a>
+          <span>
+            <AtSymbolIcon />
+            root@hashfunc.io
+          </span>
+        </StyledProfileLink>
       </StyledProfile>
       <StyledProfileImage>
         <img src="/assets/hashfunc.png" alt="hashfunc profile image" />

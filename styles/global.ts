@@ -12,4 +12,10 @@ export default createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+  a {
+    color: inherit;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+  }
 `;

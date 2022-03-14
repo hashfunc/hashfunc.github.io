@@ -25,7 +25,7 @@ export const StyledProfile = styled.div`
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 40px 40px 25px 40px;
   height: 100%;
   border-right: 1px solid rgba(255, 255, 255, 0.35);
   @media (max-width: 800px) {
@@ -49,10 +49,30 @@ export const StyledProfileRole = styled.div`
   font-size: 16px;
 `;
 
-export const StyledProfileHashTag = styled.div`
+export const StyledProfileLink = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: #848484;
-  font-size: 10px;
+  font-size: 16px;
   line-height: 1.8em;
+  a,
+  span {
+    display: flex;
+    align-items: center;
+  }
+  img {
+    opacity: 0.6;
+    box-sizing: border-box;
+    margin-left: 2px;
+    margin-right: 6px;
+    height: 18px;
+  }
+  svg {
+    box-sizing: border-box;
+    margin-right: 6px;
+    height: 20px;
+  }
 `;
 
 export const StyledProfileImage = styled.div`
