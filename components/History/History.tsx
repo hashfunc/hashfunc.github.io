@@ -32,9 +32,7 @@ function History({ history }: Props) {
         <StyledHistoryContentContainer>
           {history.contents.map(({ content, env }) => (
             <StyledHistoryContent key={content}>
-              <StyledHistoryContentMain>
-                -&nbsp;&nbsp;{content}
-              </StyledHistoryContentMain>
+              <StyledHistoryContentMain>- {content}</StyledHistoryContentMain>
               <StyledHistoryContentEnv>{env}</StyledHistoryContentEnv>
             </StyledHistoryContent>
           ))}
