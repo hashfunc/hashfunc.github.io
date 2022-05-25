@@ -28,18 +28,10 @@ jobs:
       - name: Next export
         run: yarn next export
 
-      - name: Create .nojekyll file
-        run: touch out/.nojekyll
-
-      - name: Create CNAME file
-        run: echo hashfunc.io > out/CNAME
-
-      - name: Commit & Push
-        run: |
-          git config user.name GitHub Action
-          git config user.email action@github.com
-          git add -f out/
-          git checkout -b publish
-          git commit -m "$(git rev-parse HEAD)"
-          git subtree split --prefix out -b gh-pages
-          git push -f origin gh-pages:gh-pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          cname: hashfunc.io
+          force_orphan: true
