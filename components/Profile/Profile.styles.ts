@@ -1,15 +1,14 @@
 import styled from "styled-components";
-import { GlassmorphismContainerCSS } from "styles/glassmorphism";
 
 export const StyledProfileLayout = styled.div`
-  ${GlassmorphismContainerCSS};
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   padding: 15px;
   width: 800px;
-  height: 400px;
+  height: 360px;
+
   @media (max-width: 800px) {
     flex-direction: column;
     width: 90vw;
@@ -25,36 +24,39 @@ export const StyledProfile = styled.div`
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
+  margin-right: 15px;
   padding: 40px 40px 25px 40px;
   height: 100%;
-  border-right: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: #f6dc3e;
+  border-radius: 12px;
+
   @media (max-width: 800px) {
-    padding: 20px;
+    margin-right: 0;
+    width: 100%;
+    padding: 25px 20px 15px 20px;
     border-right: none;
     border-top: 1px solid rgba(255, 255, 255, 0.35);
   }
 `;
 
 export const StyledProfileHeader = styled.div`
-  color: #646464;
+  color: #4e4e4e;
 `;
 
 export const StyledProfileName = styled.div`
   font-size: 38px;
+  font-weight: 800;
   letter-spacing: 4px;
   line-height: 0.8em;
-`;
-
-export const StyledProfileRole = styled.div`
-  font-size: 16px;
 `;
 
 export const StyledProfileLink = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #848484;
+  color: #6e6e6e;
   font-size: 16px;
+  font-weight: 600;
   line-height: 1.8em;
   a,
   span {
@@ -75,24 +77,36 @@ export const StyledProfileLink = styled.div`
   }
 `;
 
+export const StyledProfileImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 15px;
+  height: 100%;
+  border-radius: 12px;
+  background-color: #e7b8b2;
+
+  @media (max-width: 800px) {
+    margin: 15px 0;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+`;
+
 export const StyledProfileImage = styled.div`
   box-sizing: border-box;
-  margin: 0 15px 0 30px;
-  width: 300px;
-  height: 300px;
-  border: 1px solid rgba(0, 0, 0, 0.02);
-  border-radius: 50%;
-  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.15);
+  width: 100%;
+  height: 100%;
+  background-color: #dad3d3;
+  border-radius: 12px;
+
   img {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-  }
-  @media (max-width: 800px) {
-    margin: 30px 0;
-    width: 85%;
-    max-width: 300px;
-    height: auto;
-    order: -1;
+    border-radius: 12px;
   }
 `;

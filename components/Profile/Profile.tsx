@@ -1,12 +1,12 @@
 import { AtSymbolIcon } from "@heroicons/react/24/outline";
 import {
-  StyledProfileLayout,
   StyledProfile,
   StyledProfileHeader,
-  StyledProfileName,
-  StyledProfileRole,
-  StyledProfileLink,
   StyledProfileImage,
+  StyledProfileImageContainer,
+  StyledProfileLayout,
+  StyledProfileLink,
+  StyledProfileName,
 } from "./Profile.styles";
 
 function Profile() {
@@ -14,13 +14,12 @@ function Profile() {
     <StyledProfileLayout>
       <StyledProfile>
         <StyledProfileHeader>
-          <StyledProfileRole>개발자</StyledProfileRole>
-          <StyledProfileName>hashfunc</StyledProfileName>
+          <StyledProfileName>HASHFUNC</StyledProfileName>
         </StyledProfileHeader>
         <StyledProfileLink>
           <a href="https://github.com/hashfunc">
             <img src="/assets/github.png" alt="GitHub icon" />
-            hashfunc
+            HASHFUNC
           </a>
           <span>
             <AtSymbolIcon />
@@ -28,9 +27,11 @@ function Profile() {
           </span>
         </StyledProfileLink>
       </StyledProfile>
-      <StyledProfileImage>
-        <img src="/assets/hashfunc.png" alt="hashfunc profile image" />
-      </StyledProfileImage>
+      <StyledProfileImageContainer>
+        <StyledProfileImage>
+          <img src="/assets/hashfunc.png" alt="hashfunc profile image" />
+        </StyledProfileImage>
+      </StyledProfileImageContainer>
     </StyledProfileLayout>
   );
 }
